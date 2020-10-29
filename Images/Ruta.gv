@@ -1,0 +1,24 @@
+digraph Ruta {
+	node [color=black fillcolor=steelblue fixedsize=true shape=circle style=filled width=1]
+	nodo1 [label=Luis]
+	node [color=black fillcolor=yellowgreen fixedsize=true shape=circle style=filled width=1]
+	nodo2 [label=Persona]
+	node [color=black fillcolor=yellowgreen fixedsize=true shape=circle style=filled width=1]
+	nodo3 [label=Persona]
+	node [color=black fillcolor=white fixedsize=true shape=circle style=filled width=1]
+	nodo4 [label=Disponible]
+	node [color=black fillcolor=red fixedsize=true shape=circle style=filled width=1]
+	nodo5 [label=Manuel]
+	nodo1 -> nodo2
+	nodo2 -> nodo3
+	nodo3 -> nodo4
+	nodo4 -> nodo5
+	nodo2 -> nodo1
+	nodo3 -> nodo2
+	nodo4 -> nodo3
+	nodo5 -> nodo4
+	overlap=false
+	label=">>> Personas <<<"
+	fontsize=20
+	rankdir=LR
+}
