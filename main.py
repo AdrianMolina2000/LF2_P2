@@ -1,5 +1,5 @@
 import os
-
+from cargar_archivo import carga_archivo
 
 def datos_del_estudiante():
     print("\n==========================================")
@@ -24,11 +24,12 @@ def menu_principal():
                 if opcion == 1:
                     print("Ha marcado la opcion Cargar Archivo")
                     print("==========================================\n")
-                    
+                    carga_archivo()
+
                 elif opcion == 2:
                     print("Ha marcado la opcion Generar Grafica")
                     print("==========================================\n")
-                            
+                    os.startfile("Reporte\Tokens_lista.html")
                 elif opcion == 3:
                     print("Saliendo...\n")
                     break

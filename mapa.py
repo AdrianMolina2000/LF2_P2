@@ -6,7 +6,7 @@ def graficar_lista(lista):
     nodos = lista[1]
 
 
-    t = Digraph('Ruta', filename='Ruta.gv', format="png", directory="Images/")
+    t = Digraph('Ruta', filename='Ruta', format="svg", directory="Reporte/")
 
     
 
@@ -43,7 +43,10 @@ def graficar_lista(lista):
     t.attr(fontsize='20')
     t.attr(rankdir="LR")
 
-    t.view()
+    # t.view()
+    t.render()
+
+
 
 
 
@@ -51,9 +54,7 @@ def graficar_matriz(lista):
     propiedades = lista[0]
     mat = lista[1]
 
-
-    t = Digraph('Ruta', filename='Ruta.gv', format="png", directory="Images/")
-
+    t = Digraph('Ruta', filename='Ruta', format="svg", directory="Reporte/")
 
     index = 0
 
@@ -91,4 +92,5 @@ def graficar_matriz(lista):
     t.attr(label= propiedades["nombre_matriz"])
     t.attr(fontsize='20')
     t.attr(rankdir="LR")
-    t.view()
+    # t.view()
+    t.render()

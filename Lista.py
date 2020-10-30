@@ -90,5 +90,5 @@ def leer_archivo_lista(path):
     
     graficar_lista(lista)
                 
-leer_archivo_lista("Listas.lfp")
+# leer_archivo_lista("Listas.lfp")
 

@@ -19,6 +19,7 @@ def report(tokis):
         "   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>\n")
     file_name.write("</head>\n")
     file_name.write("<body class='container grey lighten-1'>\n")
+    file_name.write("<h2>TOKENS</h2>\n")
     file_name.write("   <table class='highlight'>\n")
     file_name.write("       <thead>\n")
     file_name.write("           <tr>\n")
@@ -48,10 +49,13 @@ def report(tokis):
 
     file_name.write("       </tbody>\n")
     file_name.write("   </table>\n")
+    file_name.write("   <hr>\n")
+    file_name.write("<h2>GRAFICA</h2>\n")
+    file_name.write("<img src='Ruta.svg' alt='Grafica' ")
     file_name.write("</body>\n</html>\n")
 
     file_name.close()
-    os.startfile("Reporte\Tokens_lista.html")
+    # os.startfile("Reporte\Tokens_lista.html")
 
 # PATRONES
 
@@ -62,7 +66,7 @@ pattern_nodo = r"[N|n][O|o][D|d][O|o]\s*\(.*,.*,.*\).*;"
 pattern_defecto = r"\}\s*[D|d][E|e][F|f][E|e][C|c][T|t][O|o]\s*\(.*\)\.*"
 
 
-def analizar_archivo_tokens(path):
+def analizar_matriz_tokens(path):
 
     tokens = []
 
@@ -168,5 +172,6 @@ def analizar_archivo_tokens(path):
 
             n_linea += 1
 
-    # report(tokens)
-analizar_archivo_tokens("Matriz.lfp")
+    report(tokens)
+
+# analizar_archivo_tokens("Matriz.lfp")
