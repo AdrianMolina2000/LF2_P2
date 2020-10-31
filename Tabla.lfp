@@ -6,4 +6,4 @@ tabla (3,'** Equipos **'){
     encabezados ('Equipo','Color Asignado','No. Integrantes') amarillo2;
     fila (#)#; //Tendrá los valores por defecto
 
-} defecto ('---') gri2s; 
+} defecto ('---') Gris2; 
