@@ -60,13 +60,13 @@ def report(tokis):
 # PATRONES
 
 
-pattern_matriz = r"[M|m][A|a][T|t][R|r][I|i][Z|z]\s*\(.*,.*,.*,.*,.*\)\{"
+pattern_tabla = r"[T|t][A|a][B|b][L|l][A|a]\s*\(.*,.*\)\{"
+pattern_encabezado = r"[E|e][N|n][C|c][A|a][B|b][E|e][Z|z][A|a][D|d][O|o][S|s]\s*\(.*\).*;"
 pattern_fila = r"[F|f][I|i][L|l][A|a]\s*\(.*\).*;"
-pattern_nodo = r"[N|n][O|o][D|d][O|o]\s*\(.*,.*,.*\).*;"
 pattern_defecto = r"\}\s*[D|d][E|e][F|f][E|e][C|c][T|t][O|o]\s*\(.*\)\.*"
 
 
-def analizar_matriz_tokens(path):
+def analizar_tabla_tokens(path):
 
     tokens = []
 
@@ -75,11 +75,11 @@ def analizar_matriz_tokens(path):
         n_linea = 1
         for linea in lineas:
             # Matriz
-            if re.search(pattern_matriz, linea):
+            if re.search(pattern_tabla, linea):
                 obtener = re.sub(
-                    r"\(.*,.*,.*,.*,.*\)\{", "", re.findall(pattern_matriz, linea)[0])
-                tok = Token(obtener, "Matriz", n_linea, re.search(
-                    pattern_matriz, linea).start()+1)
+                    r"\(.*,.*\)\{", "", re.findall(pattern_tabla, linea)[0])
+                tok = Token(obtener, "Tabla", n_linea, re.search(
+                    pattern_tabla, linea).start()+1)
                 tokens.append(tok)
                 # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
@@ -91,13 +91,13 @@ def analizar_matriz_tokens(path):
                     pattern_fila, linea).start()+1)
                 tokens.append(tok)
                 # print(tok.fila, tok.columna, tok.lexema, tok.token)
-
-            # Nodo
-            if re.search(pattern_nodo, linea):
-                obtener = re.sub(r"\(.*,.*,.*\).*;", "",
-                                 re.findall(pattern_nodo, linea)[0])
-                tok = Token(obtener.replace(" ",""), "Nodo", n_linea, re.search(
-                    pattern_nodo, linea).start()+1)
+            
+            # Encabezado
+            if re.search(pattern_encabezado, linea):
+                obtener = re.sub(r"\(.*\).*;", "",
+                                 re.findall(pattern_encabezado, linea)[0])
+                tok = Token(obtener.replace(" ",""), "Encabezado", n_linea, re.search(
+                    pattern_encabezado, linea).start()+1)
                 tokens.append(tok)
                 # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
@@ -149,8 +149,6 @@ def analizar_matriz_tokens(path):
                 tokens.append(tok)
                 # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
-            
-
             # Defecto
             if re.search(pattern_defecto, linea):
                 obtener = re.sub(
@@ -174,4 +172,4 @@ def analizar_matriz_tokens(path):
 
     report(tokens)
 
-# analizar_archivo_tokens("Matriz.lfp")
+# analizar_tabla_tokens("Tabla.lfp")

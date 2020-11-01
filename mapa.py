@@ -114,8 +114,8 @@ def graficar_tabla(lista):
     encabezados = lista[1]
     filas = lista[2]
 
-    s = Digraph('Ruta', filename='Ruta', format="png", directory="Reporte/", node_attr={'shape': 'plaintext'})
-    # t = Digraph('Ruta', filename='Ruta', format="svg", directory="Reporte/")
+    # s = Digraph('Ruta', filename='Ruta', format="png", directory="Reporte/", node_attr={'shape': 'plaintext'})
+    s = Digraph('Ruta', filename='Ruta', format="svg", directory="Reporte/", node_attr={'shape': 'plaintext'})
 
     titulos = list(map(lambda x: devolver(x.contenido, colores[x.color.lower()]), encabezados))
 
@@ -133,5 +133,5 @@ def graficar_tabla(lista):
     s.attr(overlap='false')
     s.attr(label= propiedades["nombre_tabla"])
     s.attr(fontsize='20')
-    s.view()
-    # s.render()
+    # s.view()
+    s.render()

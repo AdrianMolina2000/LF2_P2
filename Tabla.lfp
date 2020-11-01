@@ -7,3 +7,4 @@ tabla (3,'** Equipos **'){
     fila (#)#; //Tendrá los valores por defecto
 
 } defecto ('---') Gris2; 
+

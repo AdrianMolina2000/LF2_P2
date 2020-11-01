@@ -70,56 +70,56 @@ def analizar_lista_tokens(path):
                 obtener = re.sub(r"\(.*,.*,.*\)\{", "", re.findall(pattern_lista,linea)[0])
                 tok = Token(obtener,"Lista", n_linea, re.search(pattern_lista, linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             #Parentesis-Apertura
             if re.search(r"\(", linea):
                 obtener = re.search(r"\(", linea)
                 tok = Token(obtener.group(),"Parentesis_Apertura", n_linea, re.search(r"\(", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             #Parentesis-Cerradura
             if re.search(r"\)", linea):
                 obtener = re.search(r"\)", linea)
                 tok = Token(obtener.group(),"Parentesis_Cerradura", n_linea, re.search(r"\)", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
             #Llave-Apertura
             if re.search(r"\{", linea):
                 obtener = re.search(r"\{", linea)
                 tok = Token(obtener.group(),"Llave_Apertura", n_linea, re.search(r"\{", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             #Llave-Cerradura
             if re.search(r"\}", linea):
                 obtener = re.search(r"\}", linea)
                 tok = Token(obtener.group(),"Llave_Cerradura", n_linea, re.search(r"\}", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             #punto y coma
             if re.search(r";", linea):
                 obtener = re.search(r";", linea)
                 tok = Token(obtener.group(),"Fin de Instruccion", n_linea, re.search(r";", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
             #Nodos
             if re.search(pattern_nodos, linea):
                 obtener = re.sub(r"\(.*,.*\).*;", "", re.findall(pattern_nodos,linea)[0])
                 tok = Token(obtener,"Nodos", n_linea, re.search(pattern_nodos, linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             #Nodo
             if re.search(pattern_nodo, linea):
                 obtener = re.sub(r"\(.*\).*;", "", re.findall(pattern_nodo,linea)[0])
                 tok = Token(obtener,"Nodo", n_linea, re.search(pattern_nodo, linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
             #Defecto
             if re.search(pattern_defecto, linea):
@@ -128,14 +128,14 @@ def analizar_lista_tokens(path):
                 obtener = obtener.replace(" ", "")
                 tok = Token(obtener,"Defecto", n_linea, re.search(pattern_defecto, linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             #Nombre
             if re.search(r"'.*'", linea):
                 obtener = re.search(r"'.*'", linea)
                 tok = Token(obtener.group(),"Nombre", n_linea, re.search(r"'.*'", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
             
             
             
@@ -144,7 +144,7 @@ def analizar_lista_tokens(path):
                 obtener = re.search(r"//", linea)
                 tok = Token(obtener.group(),"Comentario", n_linea, re.search(r"//", linea).start()+1)
                 tokens.append(tok)
-                print(tok.fila, tok.columna, tok.lexema, tok.token)
+                # print(tok.fila, tok.columna, tok.lexema, tok.token)
 
 
             n_linea += 1

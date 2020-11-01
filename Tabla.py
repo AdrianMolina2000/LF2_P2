@@ -22,7 +22,8 @@ encabezados = []
 
 nombre_def = ""
 color_def = ""
-def leer_archivo_matriz(path):   
+
+def leer_archivo_tabla(path):   
     with open(path, 'r', encoding='utf-8') as f:
         lineas = f.readlines()
         num_fila = 0
@@ -125,4 +126,4 @@ def leer_archivo_matriz(path):
 
     graficar_tabla(tabla)
                 
-leer_archivo_matriz("Tabla.lfp")
+# leer_archivo_matriz("Tabla.lfp")

@@ -132,4 +132,4 @@ def leer_archivo_matriz(path):
 
     graficar_matriz(matriz)
                 
-leer_archivo_matriz("Matriz.lfp")
+# leer_archivo_matriz("Matriz.lfp")

@@ -30,6 +30,7 @@ def menu_principal():
                     print("Ha marcado la opcion Generar Grafica")
                     print("==========================================\n")
                     os.startfile("Reporte\Tokens_lista.html")
+                
                 elif opcion == 3:
                     print("Saliendo...\n")
                     break
@@ -45,12 +46,12 @@ def menu_principal():
     
 if __name__ == "__main__":
     datos_del_estudiante()
-    menu_principal()
-    # try:
-    #     menu_principal()
-    # except Exception as e:
-    #     print("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-    #     print("///// Error -> Error -> Error ->  Error /////") 
-    #     print(e)
-    #     print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
-    #     menu_principal()
+    # menu_principal()
+    try:
+        menu_principal()
+    except Exception as e:
+        print("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+        print("///// Error -> Error -> Error ->  Error /////") 
+        print(e)
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
+        menu_principal()
