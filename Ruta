@@ -1,0 +1,15 @@
+digraph Ruta {
+	node [shape=plaintext]
+	struct1 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR>
+        <TD>encabezado1</TD><TD>encabezado2</TD><TD>encabezado3</TD>
+    </TR>
+    <TR>
+        <TD>1</TD>
+        <TD>2</TD>
+        <TD>3</TD>
+    </TR>
+    </TABLE>>]
+	overlap=false
+	fontsize=20
+}
