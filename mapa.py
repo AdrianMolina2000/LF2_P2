@@ -16,7 +16,7 @@ def graficar_lista(lista):
     for nod in nodos:
         index +=1
 
-        t.attr('node', shape=formas[propiedades["forma_nodo"]], fixedsize='true', width="1", color="black", style="filled", fillcolor=colores[nod.color])
+        t.attr('node', shape=formas[propiedades["forma_nodo"].lower()], fixedsize='true', width="1", color="black", style="filled", fillcolor=colores[nod.color.lower()])
         
         t.node(f"nodo{index}", label=nod.nombre)
 
@@ -29,7 +29,7 @@ def graficar_lista(lista):
 
     
     #GRAFICAR FLECHAS DOBLES
-    if propiedades["lista_doble"] == "verdadero":
+    if propiedades["lista_doble"].lower() == "verdadero":
         index = 0
         for i in range(len(nodos)):
             index +=1
@@ -62,7 +62,7 @@ def graficar_matriz(lista):
     #GRAFICAR NODOS
     for i in range(0,int(propiedades["columna"])):
         for j in range(0, int(propiedades["fila"])):
-            t.attr('node', shape=formas[propiedades["forma_nodo"]], fixedsize='true', width="1", color="black", style="filled", fillcolor=colores[mat[i][j].color])
+            t.attr('node', shape=formas[propiedades["forma_nodo"].lower()], fixedsize='true', width="1", color="black", style="filled", fillcolor=colores[mat[i][j].color.lower()])
             t.node(f"nodo{i,j}", label=mat[i][j].nombre)
     
     #GRAFICAR FLECHAS
@@ -77,7 +77,7 @@ def graficar_matriz(lista):
 
     
     #GRAFICAR FLECHAS DOBLES
-    if propiedades["matriz_doble"] == "verdadero":
+    if propiedades["matriz_doble"].lower() == "verdadero":
         for i in range(0,int(propiedades["columna"])):
             for j in range(0, int(propiedades["fila"])):
 
@@ -103,7 +103,7 @@ def devolver(cont, color):
     dato = ""
 
     for i in cont:
-        dato += f"<TD bgcolor='{color}'>{i}</TD>"
+        dato += f"<TD bgcolor='{color.lower()}'>{i}</TD>"
     
     return dato
 
