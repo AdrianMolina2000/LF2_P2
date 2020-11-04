@@ -7,6 +7,8 @@ from Lista import leer_archivo_lista
 from Matriz import leer_archivo_matriz
 from Tabla import leer_archivo_tabla
 
+from Err_lista import analizar_lista_Errores
+
 pattern_lista = r"[L|l][I|i][S|s][T|t][A|a]\s*\(.*,.*,.*\)\{"
 pattern_matriz = r"[M|m][A|a][T|t][R|r][I|i][Z|z]\s*\(.*,.*,.*,.*,.*\)\{"
 pattern_tabla = r"[T|t][A|a][B|b][L|l][A|a]\s*\(.*,.*\)\{"
@@ -23,6 +25,7 @@ def carga_archivo():
                     #Lista
                     if re.search(pattern_lista, linea):
                         analizar_lista_tokens(ruta)
+                        analizar_lista_Errores(ruta)
                         leer_archivo_lista(ruta)
                         break
 

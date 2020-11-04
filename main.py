@@ -30,6 +30,7 @@ def menu_principal():
                     print("Ha marcado la opcion Generar Grafica")
                     print("==========================================\n")
                     os.startfile("Reporte\Tokens_lista.html")
+                    os.startfile("Reporte\Errores_lista.html")
                 
                 elif opcion == 3:
                     print("Saliendo...\n")

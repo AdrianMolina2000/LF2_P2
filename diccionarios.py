@@ -44,3 +44,6 @@ formas = {
 }
 
 # print ("azul" in colores.keys())
+
+# if type("si") == str:
+    # print("si")

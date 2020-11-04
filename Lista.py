@@ -24,7 +24,6 @@ def leer_archivo_lista(path):
     with open(path, 'r', encoding='utf-8') as f:
         lineas = f.readlines()
         estadoPadre = "Nada"
-        estadoHijo = ""
         for i in lineas:
             if re.search(pattern_lista, i):
                 estadoPadre = "Lista"
