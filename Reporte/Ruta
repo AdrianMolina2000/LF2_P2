@@ -1,12 +1,49 @@
 digraph Ruta {
-	node [shape=plaintext]
-	struct1 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-    <TR>
-        ["<TD bgcolor='yellow'>Equipo</TD><TD bgcolor='yellow'>ColorAsignado</TD><TD bgcolor='yellow'>No.Integrantes</TD>"]
-    </TR>
-    ["<TR><TD bgcolor='steelblue'>Equipo1</TD><TD bgcolor='steelblue'>Azul</TD><TD bgcolor='steelblue'>7</TD></TR>", "<TR><TD bgcolor='darkgrey'>Disponible</TD><TD bgcolor='darkgrey'>---</TD><TD bgcolor='darkgrey'>---</TD></TR>", "<TR><TD bgcolor='red'>Equipo3</TD><TD bgcolor='red'>Rojo</TD><TD bgcolor='red'>---</TD></TR>", "<TR><TD bgcolor='darkgrey'>Equipo4</TD><TD bgcolor='darkgrey'>---</TD><TD bgcolor='darkgrey'>6</TD></TR>", "<TR><TD bgcolor='darkgrey'>---</TD><TD bgcolor='darkgrey'>---</TD><TD bgcolor='darkgrey'>---</TD></TR>"]
-    </TABLE>>]
+	node [color=black fillcolor=orchid fixedsize=true shape=box style=filled width=1]
+	"nodo(0, 0)" [label=Uvas]
+	node [color=black fillcolor=orchid fixedsize=true shape=box style=filled width=1]
+	"nodo(0, 1)" [label=Arandanos]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(0, 2)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(0, 3)" [label=Disponible]
+	node [color=black fillcolor=red fixedsize=true shape=box style=filled width=1]
+	"nodo(1, 0)" [label=Sandias]
+	node [color=black fillcolor=red fixedsize=true shape=box style=filled width=1]
+	"nodo(1, 1)" [label=Disponible]
+	node [color=black fillcolor=red fixedsize=true shape=box style=filled width=1]
+	"nodo(1, 2)" [label=Manzanas]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(1, 3)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(2, 0)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(2, 1)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(2, 2)" [label=Pinas]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(2, 3)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(3, 0)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(3, 1)" [label=Disponible]
+	node [color=black fillcolor=yellow fixedsize=true shape=box style=filled width=1]
+	"nodo(3, 2)" [label=Disponible]
+	node [color=black fillcolor=sandybrown fixedsize=true shape=box style=filled width=1]
+	"nodo(3, 3)" [label=Mango]
+	"nodo(0, 0)" -> "nodo(1, 0)"
+	"nodo(0, 1)" -> "nodo(1, 1)"
+	"nodo(0, 2)" -> "nodo(1, 2)"
+	"nodo(0, 3)" -> "nodo(1, 3)"
+	"nodo(1, 0)" -> "nodo(2, 0)"
+	"nodo(1, 1)" -> "nodo(2, 1)"
+	"nodo(1, 2)" -> "nodo(2, 2)"
+	"nodo(1, 3)" -> "nodo(2, 3)"
+	"nodo(2, 0)" -> "nodo(3, 0)"
+	"nodo(2, 1)" -> "nodo(3, 1)"
+	"nodo(2, 2)" -> "nodo(3, 2)"
+	"nodo(2, 3)" -> "nodo(3, 3)"
 	overlap=false
-	label="**Equipos**"
+	label=Frutas
 	fontsize=20
 }

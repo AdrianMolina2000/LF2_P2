@@ -43,7 +43,7 @@ def report(tokis):
     file_name.write("   </table>\n")
     file_name.write("   <hr>\n")
     file_name.write("<h2>GRAFICA</h2>\n")
-    file_name.write("<img src='Ruta.svg' alt='Grafica' style='margin: center'>")
+    file_name.write("<img src='Ruta.svg' alt='No se genero la Grafica'>")
     file_name.write("</body>\n</html>\n")
 
     file_name.close()

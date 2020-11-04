@@ -24,7 +24,10 @@ def menu_principal():
                 if opcion == 1:
                     print("Ha marcado la opcion Cargar Archivo")
                     print("==========================================\n")
+                    if os.path.exists("Reporte/Ruta.svg"): 
+                        os.remove("Reporte/Ruta.svg")
                     carga_archivo()
+
 
                 elif opcion == 2:
                     print("Ha marcado la opcion Generar Grafica")
